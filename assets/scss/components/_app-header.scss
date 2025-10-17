@@ -1,0 +1,206 @@
+@import '../variables';
+
+.app-header {
+  background: $color-primary;
+  border-bottom: 1px solid $color-secondary;
+  backdrop-filter: blur(12px);
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+    min-height: 64px;
+
+    @media (max-width: 600px) {
+      padding: 10px 12px;
+      min-height: 56px;
+    }
+  }
+
+  &__identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    background: rgba($color-accent, 0.2);
+    color: $color-text-primary;
+  }
+
+  &__text {
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+    color: $color-text-primary;
+
+    @media (max-width: 600px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-family-primary;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-caption;
+    color: $color-text-secondary;
+    margin-top: 2px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  &__chip {
+    border-radius: $border-radius-lg;
+    border-color: rgba($color-accent, 0.6) !important;
+    background: rgba($color-accent, 0.2) !important;
+    color: $color-text-primary !important;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-caption;
+  }
+
+  &__theme-btn {
+    background: rgba($color-accent, 0.2) !important;
+    color: $color-text-primary !important;
+  }
+
+  &__filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 16px 16px;
+
+    @media (max-width: 960px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 12px 12px;
+      gap: 10px;
+    }
+  }
+
+  &__search,
+  &__city-filter {
+    width: 100%;
+  }
+
+  &__input {
+    ::v-deep .v-input__control {
+      min-height: 40px !important;
+    }
+
+    ::v-deep .v-input__slot {
+      min-height: 40px !important;
+      border-radius: $border-radius-sm !important;
+      background: $color-primary !important;
+      border: 1px solid $color-secondary !important;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: rgba($color-accent, 0.6) !important;
+      }
+
+      &.v-input--is-focused {
+        border-color: $color-accent !important;
+      }
+    }
+
+    ::v-deep input,
+    ::v-deep .v-select__selection,
+    ::v-deep .v-icon {
+      color: $color-text-primary !important;
+      font-family: $font-family-primary;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-body;
+      line-height: $line-height-body;
+    }
+
+    ::v-deep .v-text-field__details {
+      display: none;
+    }
+  }
+
+  &__selected-chip {
+    height: 22px !important;
+    font-family: $font-family-primary;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+    background: rgba($color-accent, 0.3) !important;
+    color: $color-text-primary !important;
+  }
+}
+
+.theme--dark .app-header {
+  background: $color-dark-primary;
+  border-bottom-color: $color-dark-secondary;
+
+  &__icon {
+    background: rgba($color-dark-accent, 0.3);
+    color: $color-dark-text-primary;
+  }
+
+  &__title {
+    color: $color-dark-text-primary;
+  }
+
+  &__subtitle {
+    color: $color-dark-text-secondary;
+  }
+
+  &__chip {
+    background: rgba($color-dark-accent, 0.3) !important;
+    border-color: rgba($color-dark-accent, 0.5) !important;
+    color: $color-dark-text-primary !important;
+  }
+
+  &__theme-btn {
+    background: rgba($color-dark-accent, 0.3) !important;
+    color: $color-dark-text-primary !important;
+  }
+
+  &__input {
+    ::v-deep .v-input__slot {
+      background: $color-dark-secondary !important;
+      border-color: rgba($color-dark-secondary, 1.2) !important;
+
+      &:hover {
+        border-color: rgba($color-dark-accent, 0.6) !important;
+      }
+
+      &.v-input--is-focused {
+        border-color: $color-dark-accent !important;
+      }
+    }
+
+    ::v-deep input,
+    ::v-deep .v-select__selection,
+    ::v-deep .v-icon {
+      color: $color-dark-text-primary !important;
+      font-family: $font-family-primary;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-body;
+      line-height: $line-height-body;
+    }
+  }
+
+  &__selected-chip {
+    background: rgba($color-dark-accent, 0.4) !important;
+    color: $color-dark-text-primary !important;
+  }
+}

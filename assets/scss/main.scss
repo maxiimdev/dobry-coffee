@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'components/index';
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-body;
+  background: $color-primary;
+  color: $color-text-primary;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-family: $font-family-primary;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-h1;
+  color: $color-text-primary;
+}
+
+.caption {
+  font-family: $font-family-primary;
+  font-size: $font-size-caption;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-caption;
+  color: $color-text-secondary;
+}
+
+// Dark theme
+.theme--dark {
+  body {
+    background: $color-dark-primary;
+    color: $color-dark-text-primary;
+  }
+
+  h1 {
+    color: $color-dark-text-primary;
+  }
+
+  .caption {
+    color: $color-dark-text-secondary;
+  }
+}
+
+

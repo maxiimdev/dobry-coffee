@@ -1,0 +1,35 @@
+@import '../variables';
+
+.sidebar {
+  transition: width 0.3s ease;
+  margin-top: $spacing-sm;
+  background: $color-primary;
+  border-right: 1px solid $color-secondary;
+
+  &__toggle {
+    border-radius: $border-radius-md;
+  }
+
+  &__item {
+    border-radius: $border-radius-md;
+
+    &--active {
+      background-color: rgba($color-accent, 0.2);
+      color: $color-text-primary;
+    }
+  }
+}
+
+.theme--dark .sidebar {
+  background: $color-dark-primary;
+  border-right: 1px solid $color-dark-secondary;
+
+  &__item {
+    color: $color-dark-text-primary;
+
+    &--active {
+      background-color: rgba($color-dark-accent, 0.3);
+      color: $color-dark-text-primary;
+    }
+  }
+}

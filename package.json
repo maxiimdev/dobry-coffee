@@ -1,0 +1,29 @@
+{
+  "name": "dobry-coffee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxiimdev/dobry-coffee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxiimdev/dobry-coffee/issues"
+  },
+  "homepage": "https://github.com/maxiimdev/dobry-coffee#readme",
+  "description": "",
+  "dependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
+    "nuxt": "^2.18.1",
+    "sass": "^1.93.2",
+    "sass-loader": "^10.5.2"
+  }
+}

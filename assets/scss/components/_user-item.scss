@@ -1,0 +1,245 @@
+@import '../variables';
+
+.user-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius-xl;
+  padding: 22px 24px;
+  background: $color-primary;
+  border: 1px solid $color-secondary;
+  box-shadow: $shadow-md;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba($color-accent, 0.3);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 120% at 0% 0%, rgba($color-accent, 0.1) 0%, rgba($color-accent, 0.02) 70%);
+    pointer-events: none;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 1;
+  }
+
+  &__identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__avatar {
+    background: rgba($color-accent, 0.2);
+    color: $color-text-primary;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba($color-accent, 0.4);
+  }
+
+  &__avatar--blocked {
+    background: rgba($color-error, 0.2);
+    color: $color-text-primary;
+    border-color: rgba($color-error, 0.4);
+  }
+
+  &__name {
+    font-family: $font-family-primary;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-h1;
+    color: $color-text-primary;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-primary;
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-body;
+    color: $color-text-secondary;
+  }
+
+  &__status-chip {
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  &__divider {
+    margin: 16px 0;
+    opacity: 0.5;
+  }
+
+  &__metrics {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    z-index: 1;
+  }
+
+  &__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__metric-label {
+    font-family: $font-family-primary;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-caption;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $color-text-secondary;
+  }
+
+  &__metric-value {
+    font-family: $font-family-primary;
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-body;
+    color: $color-text-primary;
+  }
+
+  &__metric-value--positive {
+    color: $color-text-primary;
+  }
+
+  &__metric-value--muted {
+    color: $color-text-secondary;
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+
+  &__location {
+    display: inline-flex;
+    align-items: center;
+    font-family: $font-family-primary;
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-body;
+    color: $color-accent;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: rgba($color-accent, 0.8);
+    }
+  }
+
+  &__visit {
+    display: inline-flex;
+    align-items: center;
+    font-family: $font-family-primary;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-caption;
+    color: $color-text-secondary;
+  }
+
+  &__action {
+    margin-left: auto;
+    border-radius: $border-radius-md;
+    text-transform: none;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.01em;
+  }
+}
+
+.theme--dark {
+  .user-card {
+    background: $color-dark-primary;
+    border-color: $color-dark-secondary;
+    box-shadow: $shadow-dark;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba($color-dark-accent, 0.2);
+    }
+
+    &__overlay {
+      background: radial-gradient(120% 120% at 0% 0%, rgba($color-dark-accent, 0.15) 0%, rgba($color-dark-accent, 0.02) 70%);
+    }
+
+    &__avatar {
+      background: rgba($color-dark-accent, 0.3);
+      color: $color-dark-text-primary;
+      border-color: rgba($color-dark-accent, 0.5);
+    }
+
+    &__avatar--blocked {
+      background: rgba($color-error, 0.3);
+      color: $color-dark-text-primary;
+      border-color: rgba($color-error, 0.5);
+    }
+
+    &__name {
+      color: $color-dark-text-primary;
+    }
+
+    &__contact {
+      color: $color-dark-text-secondary;
+    }
+
+    &__metric-label {
+      color: $color-dark-text-secondary;
+    }
+
+    &__metric-value {
+      color: $color-dark-text-primary;
+    }
+
+    &__metric-value--muted {
+      color: $color-dark-text-secondary;
+    }
+
+    &__location {
+      color: $color-dark-accent;
+
+      &:hover {
+        color: rgba($color-dark-accent, 0.8);
+      }
+    }
+
+    &__visit {
+      color: $color-dark-text-secondary;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .user-card {
+    padding: 18px;
+    border-radius: 20px;
+
+    &__metrics {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    &__action {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

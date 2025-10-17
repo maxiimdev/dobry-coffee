@@ -1,0 +1,63 @@
+:root {
+  --color-primary: #FFFFFF;
+  --color-secondary: #EEEEEE;
+  --color-accent: #FFD166;
+  --color-text-primary: #000000;
+  --color-text-secondary: #787878;
+
+  --color-dark-primary: #2B2B2B;
+  --color-dark-secondary: #3D3D3D;
+  --color-dark-accent: #FFD166;
+  --color-dark-text-primary: #FFFFFF;
+  --color-dark-text-secondary: #B0B0B0;
+
+  --color-error: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+}
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-accent: var(--color-accent);
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+
+$color-dark-primary: var(--color-dark-primary);
+$color-dark-secondary: var(--color-dark-secondary);
+$color-dark-accent: var(--color-dark-accent);
+$color-dark-text-primary: var(--color-dark-text-primary);
+$color-dark-text-secondary: var(--color-dark-text-secondary);
+
+$color-error: var(--color-error);
+$color-success: var(--color-success);
+$color-warning: var(--color-warning);
+
+$font-family-primary: 'Nunito', sans-serif;
+
+$font-size-h1: 1.5rem; // 24px
+$line-height-h1: 1.17; // 28px
+
+$font-size-body: 0.875rem; // 14px
+$line-height-body: 1.14; // 16px
+
+$font-size-caption: 0.625rem; // 10px
+$line-height-caption: 1.2; // 12px
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 24px;
+
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
+
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.3);
